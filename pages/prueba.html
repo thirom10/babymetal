@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+    .contenedor {
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .imagen {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .informacion {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 10px;
+      box-sizing: border-box;
+      transition: bottom 0.3s ease;
+    }
+
+    .contenedor:hover .imagen {
+      transform: translateX(-100%);
+    }
+
+    .contenedor:hover .informacion {
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+  <img class="imagen" src="../media/biografia/moa.jpg" alt="Descripción de la imagen">
+  <div class="informacion">
+    <p>Información adicional aquí.</p>
+  </div>
+</div>
+
+</body>
+</html>
